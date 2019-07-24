@@ -8,7 +8,10 @@ with disable_file_system_redirection():
             for file_name in src_files:
                 full_file_name = os.path.join(win10ADMXdpath, file_name)
                 if (os.path.isfile(full_file_name)):
-                    shutil.copy(full_file_name, r'C:/rdtesting/')
+                    try:
+                        shutil.copy(full_file_name, r'C:/Windows/PolicyDefinitions')
+                    except Exception as e:
+                        return e.message
             return 'ADMX Success'
         except Exception as e:
             return e.message
