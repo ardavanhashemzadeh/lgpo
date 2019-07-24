@@ -1,5 +1,4 @@
 import base64, zipfile, urllib, os, sys, ctypes, subprocess, traceback, logging, shutil
-from zipfile import *
 
 rootpath = r'C:/Program Files/LGPO/' # root path for deployment
 win10path = os.path.join(rootpath, 'WIN10/') # optional Version folder
